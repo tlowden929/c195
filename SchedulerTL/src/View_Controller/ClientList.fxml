@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ClientListController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #C0C0C0;">
+         <center>
+            <TableView fx:id="customerTbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="930.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="addressCol" minWidth="9.0" prefWidth="220.0" text="Address" />
+                  <TableColumn fx:id="address2Col" minWidth="9.0" prefWidth="99.0" text="Address 2" />
+                  <TableColumn fx:id="cityCol" prefWidth="118.0" text="City" />
+                  <TableColumn fx:id="postalCodeCol" prefWidth="97.0" text="Postal Code" />
+                  <TableColumn fx:id="countryCol" prefWidth="94.0" text="Country" />
+                  <TableColumn fx:id="phoneCol" prefWidth="149.0" text="Phone" />
+              </columns>
+            </TableView>
+         </center>
+         <right>
+            <VBox prefHeight="755.0" prefWidth="131.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addCustomerbtn" prefHeight="121.0" prefWidth="131.0" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editCustomerbtn" prefHeight="117.0" prefWidth="131.0" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#delCustomerbtn" prefHeight="128.0" prefWidth="131.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#backbtn" prefHeight="123.0" prefWidth="131.0" text="Back">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="160.0" />
+               </padding>
+            </VBox>
+         </right>
+         <top>
+            <DialogPane fx:id="headerBar" prefHeight="45.0" prefWidth="1200.0" style="-fx-background-color: #98AFC7;" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #C0C0C0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.EditAppointmentController">
+   <children>
+      <TextField fx:id="titletxt" layoutX="245.0" layoutY="111.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextField fx:id="clientTxt" editable="false" layoutX="245.0" layoutY="177.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextArea fx:id="descriptiontxt" layoutX="245.0" layoutY="267.0" prefHeight="134.0" prefWidth="248.0" wrapText="true" />
+      <TextField fx:id="locationtxt" layoutX="245.0" layoutY="452.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextField fx:id="contacttxt" layoutX="245.0" layoutY="514.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextField fx:id="typetxt" layoutX="245.0" layoutY="577.0" prefHeight="31.0" prefWidth="248.0" />
+      <TextField fx:id="urltxt" layoutX="245.0" layoutY="639.0" prefHeight="31.0" prefWidth="248.0" />
+      <DatePicker fx:id="dateTxt" editable="false" layoutX="816.0" layoutY="142.0" onAction="#dateSel" />
+      <ComboBox fx:id="startTimedrp" editable="true" layoutX="816.0" layoutY="354.0" onAction="#startSel" prefWidth="150.0" promptText="00:00" />
+      <ComboBox fx:id="endTimedrp" editable="true" layoutX="996.0" layoutY="354.0" onAction="#endSel" prefWidth="150.0" promptText="00:00" />
+      <Label layoutX="94.0" layoutY="182.0" prefHeight="21.0" prefWidth="136.0" text="Client:" />
+      <Label layoutX="94.0" layoutY="644.0" prefHeight="21.0" prefWidth="122.0" text="Document URL:" />
+      <Label layoutX="94.0" layoutY="457.0" prefHeight="21.0" prefWidth="122.0" text="Location:" />
+      <Label layoutX="94.0" layoutY="582.0" prefHeight="21.0" prefWidth="122.0" text="Type:" />
+      <Label layoutX="94.0" layoutY="519.0" prefHeight="21.0" prefWidth="122.0" text="Contact:" />
+      <Label layoutX="94.0" layoutY="291.0" prefHeight="21.0" prefWidth="122.0" text="Description:" />
+      <Label layoutX="94.0" layoutY="116.0" prefHeight="21.0" prefWidth="163.0" text="Appointment Title:" />
+      <Label layoutX="816.0" layoutY="116.0" prefHeight="21.0" prefWidth="122.0" text="Date:" />
+      <Label layoutX="816.0" layoutY="313.0" prefHeight="21.0" prefWidth="150.0" text="Start Time:" />
+      <Label layoutX="996.0" layoutY="313.0" prefHeight="21.0" prefWidth="150.0" text="End Time:" />
+      <Label layoutX="94.0" layoutY="14.0" prefHeight="47.0" prefWidth="302.0" text="Edit Appointment">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="816.0" layoutY="631.0" mnemonicParsing="false" onAction="#saveApptbtn" prefHeight="47.0" prefWidth="150.0" text="Save">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="996.0" layoutY="631.0" mnemonicParsing="false" onAction="#cancelEditbtn" prefHeight="47.0" prefWidth="150.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
