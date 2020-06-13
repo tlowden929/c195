@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreenController">
+    <children>
+        <BorderPane prefHeight="800.0" prefWidth="1200.0">
+            <center>
+                <TabPane fx:id="allTabs" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab fx:id="weekTab" text="This Week">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="691.0" prefWidth="1200.0" style="-fx-background-color: #C0C0C0;">
+                           <children>
+                              <TableView fx:id="weekApptTbl" layoutX="70.0" layoutY="83.0" prefHeight="550.0" prefWidth="930.0">
+                                <columns>
+                                  <TableColumn fx:id="wkDateCol" prefWidth="100.0" text="Date" />
+                                  <TableColumn fx:id="wkTimeCol" prefWidth="100.0" text="Time" />
+                                    <TableColumn fx:id="wkNameCol" prefWidth="330.0" text="Name" />
+                                    <TableColumn fx:id="wkLocCol" prefWidth="360.0" text="Location" />
+                                </columns>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </TableView>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="monthTab" text="This Month">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0C0C0;">
+                           <children>
+                              <TableView fx:id="monApptTbl" layoutX="70.0" layoutY="83.0" prefHeight="550.0" prefWidth="930.0">
+                                 <columns>
+                                    <TableColumn fx:id="moDateCol" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="moTimeCol" prefWidth="100.0" text="Time" />
+                                    <TableColumn fx:id="moNameCol" prefWidth="330.0" text="Name" />
+                                    <TableColumn fx:id="moLocCol" prefWidth="360.0" text="Location" />
+                                 </columns>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </TableView>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab fx:id="allApptTab" text="All Appointments">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #C0C0C0;">
+                           <children>
+                              <TableView fx:id="allApptTbl" layoutX="70.0" layoutY="83.0" prefHeight="550.0" prefWidth="930.0">
+                                 <columns>
+                                    <TableColumn fx:id="allDateCol" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="allTimeCol" prefWidth="100.0" text="Time" />
+                                    <TableColumn fx:id="allNameCol" prefWidth="300.0" text="Name" />
+                                    <TableColumn fx:id="allLocCol" prefWidth="200.0" text="Location" />
+                                    <TableColumn fx:id="allUserCol" maxWidth="1.7976931348623157E308" prefWidth="189.0" text="Consultant" />
+                                 </columns>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+         <right>
+            <VBox prefHeight="755.0" prefWidth="131.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addApptbtn" prefHeight="300.0" prefWidth="139.0" text="Add">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editApptbtn" prefHeight="300.0" prefWidth="139.0" text="Edit">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#delApptbtn" prefHeight="300.0" prefWidth="139.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="10.0" layoutY="253.0" mnemonicParsing="false" onAction="#allReportsbtn" prefHeight="300.0" prefWidth="139.0" text="Reports">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="334.0" mnemonicParsing="false" onAction="#allClientsbtn" prefHeight="300.0" prefWidth="139.0" text="Client List">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="415.0" mnemonicParsing="false" onAction="#logOutbtn" prefHeight="300.0" prefWidth="139.0" text="Log Out">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <DialogPane fx:id="headerBar" prefHeight="45.0" prefWidth="1200.0" style="-fx-background-color: #98AFC7;" BorderPane.alignment="CENTER" />
+         </top>
+        </BorderPane>
+    </children>
+</AnchorPane>
